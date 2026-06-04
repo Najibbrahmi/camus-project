@@ -1,0 +1,12 @@
+# --- Web layer ---
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.17
+
+# --- Inference bridge (already in your research env) ---
+torch>=2.2
+numpy>=1.26
+scipy>=1.11
+Pillow>=10.0
+SimpleITK>=2.3        # only needed if you upload .nii.gz frames
+timm>=0.9            # only needed when MODEL_KIND=vit

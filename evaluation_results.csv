@@ -1,0 +1,5 @@
+Metric,Value
+Mean Dice Score,0.933
+HD95 (mm),7.93
+MAE on EF (%),7.004536245781644
+Model Architecture,U-Net

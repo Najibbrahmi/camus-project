@@ -1,0 +1,49 @@
+# ===== Datasets (large, do NOT push to GitHub) =====
+database/
+*.h5
+*.hdf5
+*.mhd
+*.raw
+*.nii
+*.nii.gz
+
+# ===== Model weights / checkpoints (not needed for the website) =====
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.safetensors
+optimizer_final.pth
+
+# ===== Training logs / experiment tracking =====
+wandb/
+runs/
+lightning_logs/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# ===== Notebook backups =====
+*.ipynb.bak
+
+# ===== Node / frontend build =====
+node_modules/
+dist/
+.vite/
+.dist/
+
+# ===== Env files / secrets =====
+.env
+.env.local
+*.env
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
+.vscode/

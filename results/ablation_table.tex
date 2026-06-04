@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\centering
+\caption{Label-efficiency ablation on CAMUS. Per-view Dice and HD95 plus biplane Simpson's EF MAE. Mean $\pm$ std over 3 seeds on the 50-patient test set.}
+\label{tab:ablation}
+\begin{tabular}{l c c c c c c}
+\hline
+Method & Labels (\%) & Dice 2CH & Dice 4CH & HD95 2CH (mm) & HD95 4CH (mm) & EF MAE (\%) \\
+\hline
+MAE + ViT-Tiny & 1 & 0.192$\pm$0.332 & 0.199$\pm$0.345 & 7.62$\pm$nan & 7.34$\pm$nan & 22.87$\pm$nan \
+MAE + ViT-Tiny & 5 & 0.827$\pm$0.009 & 0.824$\pm$0.004 & 3.91$\pm$0.16 & 4.56$\pm$0.09 & 19.72$\pm$1.45 \
+MAE + ViT-Tiny & 10 & 0.862$\pm$0.002 & 0.864$\pm$0.001 & 3.09$\pm$0.08 & 3.53$\pm$0.02 & 12.65$\pm$1.21 \
+MAE + ViT-Tiny & 100 & 0.907$\pm$0.000 & 0.915$\pm$0.001 & 1.98$\pm$0.01 & 2.04$\pm$0.02 & 6.89$\pm$0.30 \
+Supervised UNet & 1 & 0.776$\pm$0.010 & 0.773$\pm$0.019 & 6.39$\pm$0.24 & 7.76$\pm$0.80 & 60.66$\pm$53.72 \
+Supervised UNet & 5 & 0.865$\pm$0.007 & 0.862$\pm$0.002 & 3.82$\pm$0.22 & 4.02$\pm$0.21 & 22.79$\pm$7.22 \
+Supervised UNet & 10 & 0.894$\pm$0.005 & 0.888$\pm$0.004 & 3.08$\pm$0.03 & 3.34$\pm$0.09 & 13.86$\pm$2.85 \
+Supervised UNet & 100 & 0.927$\pm$0.001 & 0.925$\pm$0.003 & 2.05$\pm$0.06 & 2.22$\pm$0.08 & 6.86$\pm$0.45 \
+\hline
+\end{tabular}
+\end{table}

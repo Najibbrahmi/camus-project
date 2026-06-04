@@ -1,0 +1,6 @@
+Metric,Value
+Mean Dice Score,0.933
+HD95 (mm),7.93
+MAE EF (%),2.45
+Model Architecture,U-Net (ResNet Backbone)
+Training Status,Finalized

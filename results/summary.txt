@@ -1,0 +1,19 @@
+================================================================================
+FINAL RESULTS SUMMARY (biplane, both views, 3 seeds)
+================================================================================
+
+--- MAE + ViT-Tiny ---
+    1% labels (n_train=  16) | Dice 2CH 0.192±0.332  4CH 0.199±0.345 | HD95 2CH  7.62  4CH  7.34 mm | biplane EF MAE 22.87±nan%
+    5% labels (n_train=  80) | Dice 2CH 0.827±0.009  4CH 0.824±0.004 | HD95 2CH  3.91  4CH  4.56 mm | biplane EF MAE 19.72±1.45%
+   10% labels (n_train= 160) | Dice 2CH 0.862±0.002  4CH 0.864±0.001 | HD95 2CH  3.09  4CH  3.53 mm | biplane EF MAE 12.65±1.21%
+  100% labels (n_train=1600) | Dice 2CH 0.907±0.000  4CH 0.915±0.001 | HD95 2CH  1.98  4CH  2.04 mm | biplane EF MAE  6.89±0.30%
+
+--- Supervised UNet ---
+    1% labels (n_train=  16) | Dice 2CH 0.776±0.010  4CH 0.773±0.019 | HD95 2CH  6.39  4CH  7.76 mm | biplane EF MAE 60.66±53.72%
+    5% labels (n_train=  80) | Dice 2CH 0.865±0.007  4CH 0.862±0.002 | HD95 2CH  3.82  4CH  4.02 mm | biplane EF MAE 22.79±7.22%
+   10% labels (n_train= 160) | Dice 2CH 0.894±0.005  4CH 0.888±0.004 | HD95 2CH  3.08  4CH  3.34 mm | biplane EF MAE 13.86±2.85%
+  100% labels (n_train=1600) | Dice 2CH 0.927±0.001  4CH 0.925±0.003 | HD95 2CH  2.05  4CH  2.22 mm | biplane EF MAE  6.86±0.45%
+
+--- EF regression head (Notebook 3) ---
+  MLP   test EF MAE = 9.23%
+  KAN   test EF MAE = 9.99%
