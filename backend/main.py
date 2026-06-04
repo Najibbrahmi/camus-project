@@ -7,6 +7,7 @@ Docs: http://localhost:8000/docs
 from __future__ import annotations
 
 import logging
+import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
@@ -30,9 +31,15 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="CardioVision API", version="1.0.0", lifespan=lifespan)
+
+# Allowed browser origins. Localhost stays for local dev; any *.vercel.app
+# deployment is allowed via regex; add extra exact origins with CORS_ORIGINS
+# (comma-separated) env var, e.g. a custom domain.
+_extra = [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", *_extra],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
 )
 

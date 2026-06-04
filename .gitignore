@@ -14,6 +14,8 @@ database/
 *.onnx
 *.safetensors
 optimizer_final.pth
+# Exception: this ONE model is needed by the deployed backend (30MB, under GitHub limit)
+!/best_model.pth
 
 # ===== Training logs / experiment tracking =====
 wandb/

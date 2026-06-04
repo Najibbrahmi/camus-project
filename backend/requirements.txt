@@ -4,8 +4,10 @@ uvicorn[standard]==0.32.1
 python-multipart==0.0.17
 
 # --- Inference bridge (already in your research env) ---
-torch>=2.2
-numpy>=1.26
+# CPU-only torch: small, fast install for cloud hosts (no 2GB CUDA download).
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.2+cpu
+numpy>=1.26,<2
 scipy>=1.11
 Pillow>=10.0
 SimpleITK>=2.3        # only needed if you upload .nii.gz frames
